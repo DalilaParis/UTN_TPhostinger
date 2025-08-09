@@ -105,6 +105,7 @@
     justify-content: center;
     padding: 0 40px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .hostinger-section-users__container__title{
@@ -119,7 +120,6 @@
 
 .hostinger-section-users__container__cards{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -136,7 +136,8 @@
     justify-content: center;
     border-radius: 15px;
     padding: 32px;
-    height: 265px;
+    height: auto;
+    min-height: 265px;
     width: 295px;
 }
 
@@ -171,6 +172,7 @@
 .hostinger-section-users__container__user-message{
     padding-top: 16px;
     line-height: 26px;
+    overflow-wrap: break-word;
 }
 
 .bi-star-fill{
@@ -237,7 +239,8 @@
 .hostinger-section-services__cards-container__cards{
     display: flex;
     flex-direction: column;
-    height: 280px;
+    height: auto;
+    min-height: 280px;
     width: 360px;
     padding: 32px;
     text-align: left;
@@ -245,6 +248,8 @@
     background-color: #301c6b;
     border-radius: 20px;
     color: white;
+    overflow-wrap: break-word;
+    gap: 16px;
 }
 
 .hostinger-section-services__cards-container__cards__icon{
@@ -398,7 +403,7 @@
   }
 }
 
-@media (max-width: 1025) {
+@media (max-width: 1025px) {
     .mobile-menu{
         display: flex;
         justify-content: center;
@@ -409,5 +414,61 @@
     .mobile_card{
         display: flex;
         width: 100%;
+    }
+
+    .desktop_card{
+        display: none;
+    }
+
+    .hostinger-section-users__container__cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .bi-circle-fill{
+        color: #8b85ff;
+    }
+
+    .bi-circle{
+        color: #8b85ff;
+    }
+
+    .hostinger-section-users{
+        margin: 0 128px;
+    }
+
+    .hostinger-section-services__cards-container{
+        flex-direction: column;
+    }
+
+    .hostinger-section-services__cards-container__cards{
+        width: 100%;
+        min-height: 232px;
+    }
+
+    .hostinger-footer__links__payment{
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .hostinger-footer__links__payment__politics{
+        order: 1;
+    }
+
+    .hostinger-footer__links__payment__cards{
+        order: 2;
+    }
+
+    .hostinger-footer__disclaimer{
+        flex-direction: column;
+        gap: 8px;
     }
 }
